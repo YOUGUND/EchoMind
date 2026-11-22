@@ -1,0 +1,6 @@
+# Extra deps for STORAGE_MODE=multi (JWT + PostgreSQL + Milvus)
+-r requirements.txt
+SQLAlchemy==2.0.36
+asyncpg==0.30.0
+aiosqlite==0.20.0
+pymilvus==2.4.9

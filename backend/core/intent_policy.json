@@ -1,0 +1,51 @@
+{
+  "fast_path_min_confidence": 0.5,
+  "vector_skip_llm_confidence": 0.72,
+  "llm_timeout_seconds": 2.5,
+  "llm_cache_ttl_seconds": 1800,
+  "llm_cache_max_entries": 2000,
+  "synonyms": {
+    "登陆": "登录",
+    "登入": "登录",
+    "打不开": "无法登录",
+    "进不去": "无法登录",
+    "验证码收不到": "验证码",
+    "闪退": "崩溃",
+    "挂了": "崩溃",
+    "白屏了": "白屏",
+    "退钱": "退款",
+    "退费": "退款",
+    "多扣钱": "多扣",
+    "重复扣费": "重复扣款",
+    "开发票": "发票",
+    "找人工": "转人工",
+    "人工服务": "人工客服",
+    "投诉你们": "投诉"
+  },
+  "specific_patterns": {
+    "human_handoff": ["转人工", "人工客服", "找人工"],
+    "order_status": ["订单状态", "发货了吗", "处理到哪", "order status"],
+    "logistics": ["物流", "快递", "配送", "运单", "delivery", "shipping"],
+    "refund": ["退款", "退货", "refund", "return"],
+    "invoice": ["发票", "抬头", "税号", "invoice"],
+    "payment_issue": ["重复扣款", "多扣", "支付失败", "扣费", "payment failed"],
+    "account_security": ["被盗", "异常登录", "重置密码", "两步验证", "安全"],
+    "technical_login": ["无法登录", "登录失败", "401", "验证码"],
+    "technical_crash": ["崩溃", "闪退", "500", "报错", "crash", "白屏"]
+  },
+  "generic_patterns": {
+    "escalation": ["投诉", "经理", "supervisor"],
+    "complaint": ["太差", "糟糕", "horrible", "等了很久"],
+    "query": ["?", "？", "怎么", "什么", "status"],
+    "request": ["帮我", "需要", "please", "help"],
+    "greeting": ["你好", "嗨", "hello", "hi"],
+    "billing": ["退款", "扣款", "发票", "refund"],
+    "technical": ["崩溃", "报错", "error", "crash"],
+    "account": ["密码", "邮箱", "账户", "password"]
+  },
+  "urgency_keywords": {
+    "critical": ["紧急", "emergency", "urgent", "asap", "立刻"],
+    "high": ["今天", "马上", "尽快", "hurry", "now"],
+    "medium": ["这周", "soon", "快点"]
+  }
+}

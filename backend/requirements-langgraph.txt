@@ -1,0 +1,23 @@
+# LangGraph / LangChain 改造依赖草案（Phase 0）
+#
+# 用法（Phase 1 起再安装，Phase 0 仅锁定版本，不并入默认运行依赖）：
+#   pip install -r requirements-free.txt
+#   pip install -r requirements-langgraph.txt
+#
+# 约束：
+# - 需要 Python >= 3.10（项目推荐 3.12；langgraph 不支持 3.9）
+# - 与现有 pydantic==2.10.3 / httpx==0.28.1 兼容
+# - 不改 requirements-free.txt，保证 legacy 路径可继续无框架运行
+# - Phase 1 仅需 langgraph + langchain-core；openai 适配留给 Phase 2
+
+# ── 编排核心（必装）────────────────────────────────────────────────────────
+langgraph==1.2.20
+langchain-core==1.7.6
+langchain-openai==1.7.4
+
+# 下列通常由 langgraph 自动解析，显式钉死避免环境漂移：
+langgraph-checkpoint==4.3.1
+langgraph-prebuilt==1.1.1
+
+# 可选：sqlite 持久化 checkpointer
+# langgraph-checkpoint-sqlite==2.0.10
